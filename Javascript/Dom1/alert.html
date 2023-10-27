@@ -8,16 +8,26 @@
 		<button onclick="showLastName()">LASTNAME</button>
 		<button onclick="showFullName()">FIRSTNAME NAME</button>
 		<script type="text/javascript">
+            let fName = ""
+            let lName = ""
+            let fullName = ""
+            
             function showFirstName() {
 			    // Complete to show an alert with your first name 
+                fName = "HEMANT"
+                alert(fName)
 			}
 
             function showLastName() {
-                // Complete to show an alert with your last name             
+                // Complete to show an alert with your last name  
+                lName = "JAIN"        
+                alert(lName)   
             }
 
             function showFullName() {
                 // Complete to show an alert with your full name (firstname lastname)
+                fullName = `${fName} ${lName}`
+                alert(fullName)
                                 
             }
         </script>
