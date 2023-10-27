@@ -27,27 +27,55 @@
 	<script type="text/javascript">
 		function showName() {
 			// Show filled name inside h1
-            console.log("demo")
+            let name = document.getElementById("name").value
+            let display = document.getElementById("dName")
+            display.innerText = name
 		}
 
 		function showGender() {
 			// Show the selected gender inside h2
+            let gender = document.getElementById("gender").value
+            let display = document.getElementById("dGender")
+            display.innerText = gender
 		}
 
 		function showEmail() {
 			// Show the filled email inside h3
+            let email = document.getElementById("email").value
+            let display = document.getElementById("dEmail")
+            display.innerText = email
 		}
 
 		function showMobile() {
 			// Show the filled mobile inside h4
+            let mobile = document.getElementById("mobile").value
+            let display = document.getElementById("dMobile")
+            display.innerText = mobile
 		}
 
 		function resetForm() {
 			// Reset all the form elements to default values (blank "")
+            let name = document.getElementById("name")
+            let gender = document.getElementById("gender")
+            let email = document.getElementById("email")
+            let mobile = document.getElementById("mobile")
+            name.value = ""
+            gender.value = ""
+            email.value = ""
+            mobile.value = ""
+            
 		}
 
 		function resetDisplay() {
 			// Reset all the headings (h1, h2, h3, h4) to blank values
+            let name = document.getElementById("dName")
+            let gender = document.getElementById("dGender")
+            let email = document.getElementById("dEmail")
+            let mobile = document.getElementById("dMobile")
+            name.innerText = "NAME"
+            gender.innerText = "GENDER"
+            email.innerText = "EMAIL"
+            mobile.innerText = "MOBILE"
 		}
 	</script>
 </body>
