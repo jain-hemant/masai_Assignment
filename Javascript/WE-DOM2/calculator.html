@@ -4,8 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 1.1em;
+        }
+        body{
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#b79d9d;
+        }
+        #calculator{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 1px solid red; */
+            padding: 10px 0px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+        }
+        #display{
+            width: 96%;
+            margin: 20px 0px;
+            /* border: 1px solid blue; */
+        }
+        input{
+            width: 100%;
+            padding: 10px 0px ; 
+            margin: auto;  
+            border-radius: 5px;         
+        }
+        #buttons{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px 5px;
+
+        }
+        .btn{
+            width: 80px;
+            padding: 15px 10px;
+            border: none;
+            border-radius: 5px;
+
+
+        }
+    </style>
 </head>
 <body>
+    <div id="calculator">
+        <div id="display">
+            <input type="text" name="text" id="text" placeholder="Enter Number...">
+        </div>
+        <div id="buttons">
+            <button class="btn" id="persant">%</button>
+            <button class="btn" id="ce">CE</button>
+            <button class="btn" id="clear" onclick="num(' ')">C</button>
+            <button class="btn" id="backspace" onclick="num('b')">&lt;-</button>
+            <button class="btn" id="fraction">1/x</button>
+            <button class="btn" id="square">x<sup>2</sup></button>
+            <button class="btn" id="root"><sup>2</sup>vx</button>
+            <button class="btn" id="divide" onclick="num('/')">/</button>
+            <button class="btn" id="seven" onclick="num('7')">7</button>
+            <button class="btn" id="eight" onclick="num('8')">8</button>
+            <button class="btn" id="nine" onclick="num('9')">9</button>
+            <button class="btn" id="multiply" onclick="num('*')">x</button>
+            <button class="btn" id="four" onclick="num('4')">4</button>
+            <button class="btn" id="five" onclick="num('5')">5</button>
+            <button class="btn" id="six" onclick="num('6')">6</button>
+            <button class="btn" id="substract" onclick="num('-')">-</button>
+            <button class="btn" id="one" onclick="num('1')">1</button> 
+            <button class="btn" id="two" onclick="num('2')">2</button>
+            <button class="btn" id="three" onclick="num('3')">3</button>
+            <button class="btn" id="add" onclick="num('+')">+</button>
+            <button class="btn" id="star" onclick="num('00')">00</button>
+            <button class="btn" id="zero" onclick="num('0')">0</button>
+            <button class="btn" id="point" onclick="num('.')">.</button>
+            <button class="btn" id="equal" onclick="num('=')">=</button>
+
+        </div>
+
+    </div>
     
 </body>
 </html>
+<script>
+    function num(val){
+        // let ans = ""
+        let input = document.getElementById("text")        
+        if(val=='+'){
+            ans = input.value
+            input.value = ""
+        }
+        else if(val=='-'){
+            ans = input.value
+            input.value = ""
+        }
+        else if(val=='*'){
+            ans = input.value
+            input.value = ""
+        }
+        else if(val=='/'){
+            ans = input.value
+            input.value = ""
+        }
+        else if(val=='='){
+            ans = input.value
+        }
+        else{
+            input.value += val
+        }            
+        
+    }
+
+</script>
