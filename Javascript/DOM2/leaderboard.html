@@ -138,11 +138,12 @@
         
         if(val=='e'){
             // alert([display.value, min.innerText, max.innerText])
-            if(display.value<min.innerText){
-                min.innerText = display.value
+            // alert([typeof(display.value), typeof(min.innerText), typeof(max.innerText)])
+            if(Number(display.value)<Number(min.innerText)){
+                min.innerText = Number(display.value)
             }
-            else if(display.value>max.innerText){
-                max.innerText = display.value
+            else if(Number(display.value)>Number(max.innerText)){
+                max.innerText = Number(display.value)
             }
             display.value=""
         }
