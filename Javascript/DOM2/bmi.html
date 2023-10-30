@@ -34,10 +34,10 @@
         input{
             padding: 10px 0px;
             border: none;
-            font-size: 1.5em;
+            font-size: 0.8em;
             border-bottom: 2px solid green;
            text-align: center;
-            width: 30%;
+            width: 50%;
         }
         button{
             border: none;
@@ -45,19 +45,20 @@
             border-radius: 5px;
             margin: 20px 0px;
             color: azure;
+            letter-spacing: 2px;
             background-color: #071b4d;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             
-
         }
+        
 
     </style>
 </head>
 <body>
     <div id="box">
         <h2>BMI Calculator</h2>
-        <input type="text" id="weight" value="80" placeholder="Enter Weight in KG.">
-        <input type="text" id="height" value="1.7" placeholder="Enter Weight in Meter. ">
+        <input type="text" id="weight"  placeholder="Enter Weight in KG.">
+        <input type="text" id="height"  placeholder="Enter Weight in Meter. ">
         <button id="btn" onclick="calculate()">Calculate</button>
     </div>
 </body>
@@ -68,7 +69,10 @@
         let height = document.getElementById("height").value;
         let bmi = weight / (height * height).toFixed(1)
         // alert(bmi) 
-        if(bmi <=18.4){
+        if(height=="" || weight==""){
+            alert("Please Enter Number In Both Input Box!")
+        }
+        else if(bmi <=18.4){
             alert("Under Weight")
         }
         else if(bmi >=18.5 && bmi <= 24.9){

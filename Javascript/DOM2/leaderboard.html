@@ -57,6 +57,7 @@
         #scoreBox>input{
             border: 1px solid rgb(15, 15, 15);
             padding: 20px 5px;
+            /* width: 100px; */
             margin: -5px 0px 20px 0px;
             /* border-radius: 10px; */
             background-color: rgb(207, 203, 203);
@@ -95,11 +96,11 @@
     <div id="container">
         <div id="minMax">
             <div class="Box">
-                <p id="min">0</p>
+                <p id="min">43</p>
                 <p>MIN</p>
             </div>
             <div class="Box">
-                <p id="max">1</p>
+                <p id="max">2019</p>
                 <p>MAX</p>
             </div>
         </div>
@@ -107,21 +108,47 @@
             <input type="text" name="score" id="score">
         </div>
         <div id="buttons">
-            <button class="btn" id="one">1</button>
-            <button class="btn" id="two">2</button>
-            <button class="btn" id="three">3</button>
-            <button class="btn" id="four">4</button>
-            <button class="btn" id="five">5</button>
-            <button class="btn" id="six">6</button>
-            <button class="btn" id="seven">7</button>
-            <button class="btn" id="eight">8</button>
-            <button class="btn" id="nine">9</button>
-            <button class="btn" id="zero">0</button>
+            <button class="btn" id="one" onclick="execute(1)">1</button>
+            <button class="btn" id="two" onclick="execute(2)" >2</button>
+            <button class="btn" id="three" onclick="execute(3)">3</button>
+            <button class="btn" id="four" onclick="execute(4)">4</button>
+            <button class="btn" id="five" onclick="execute(5)">5</button>
+            <button class="btn" id="six" onclick="execute(6)">6</button>
+            <button class="btn" id="seven" onclick="execute(7)">7</button>
+            <button class="btn" id="eight" onclick="execute(8)">8</button>
+            <button class="btn" id="nine" onclick="execute(9)">9</button>
+            <button class="btn" id="zero" onclick="execute(0)">0</button>
         </div>
         <div id="enterBox">
-            <button class="btn" id="enter">Enter</button>
+            <button class="btn" id="enter" onclick="execute('e')" >Enter</button>
         </div>
     </div>
     
 </body>
 </html>
+<script>
+    window.onload = function(){
+        document.getElementById("score").focus()
+    }
+    
+    function execute(val){
+        let display = document.getElementById("score")
+        let min = document.getElementById("min")
+        let max = document.getElementById("max")
+        
+        if(val=='e'){
+            alert([display.value, min.innerText, max.innerText])
+            if(display.value<min.innerText){
+                min.innerText = display.value
+            }
+            else if(display.value>max.innerText){
+                max.innerText = display.value
+            }
+            display.value=""
+        }
+        else{            
+            display.value += val
+        }
+        
+    }
+</script>
