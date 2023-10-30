@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <style>
+        *{    
+            font-family: cursive, sans-serif;     
+            font-size: 1em;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 500px;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 1px solid red; */
+            margin: 100px auto;
+            padding: 20px 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 15px;
+            border: 0.2px solid rgb(230, 227, 227);
+
+        }
+        #minMax{
+            /* border: 1px solid blue; */
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;            
+            justify-content: space-between;
+            padding: 0px 10px;
+        }
+
+        .Box{
+            /* border: 1px solid rgb(196, 6, 85); */
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            text-align: center;
+            
+        }
+        #min{
+            border: 1px solid rgb(15, 15, 15);
+            background-color: red;
+            padding: 20px 35px;
+        }
+        #max{
+            border: 1px solid rgb(15, 15, 15);
+            background-color: green;
+            padding: 20px 35px;
+        }
+        #minMax p{
+            /* border: 1px dashed orange; */
+            margin-top: -5px;
+        }
+        #scoreBox>input{
+            border: 1px solid rgb(15, 15, 15);
+            padding: 20px 5px;
+            margin: -5px 0px 20px 0px;
+            /* border-radius: 10px; */
+            background-color: rgb(207, 203, 203);
+            font-size: 1.1em;
+        }
+        #buttons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px 10px;
+
+        }
+        .btn{
+            border: none;
+            padding: 15px 35px;
+            border: 1px solid rgb(15, 15, 15);
+        }
+
+        #enterBox{
+            margin: 10px 0px;
+        }
+        #enterBox #enter{
+            padding: 10px 50px;
+            background-color: black;
+            color: white;
+        }
+        #scoreBox>input:focus{
+            color: rgb(7, 24, 70);
+        }
+        .btn:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="minMax">
+            <div class="Box">
+                <p id="min">0</p>
+                <p>MIN</p>
+            </div>
+            <div class="Box">
+                <p id="max">1</p>
+                <p>MAX</p>
+            </div>
+        </div>
+        <div id="scoreBox">
+            <input type="text" name="score" id="score">
+        </div>
+        <div id="buttons">
+            <button class="btn" id="one">1</button>
+            <button class="btn" id="two">2</button>
+            <button class="btn" id="three">3</button>
+            <button class="btn" id="four">4</button>
+            <button class="btn" id="five">5</button>
+            <button class="btn" id="six">6</button>
+            <button class="btn" id="seven">7</button>
+            <button class="btn" id="eight">8</button>
+            <button class="btn" id="nine">9</button>
+            <button class="btn" id="zero">0</button>
+        </div>
+        <div id="enterBox">
+            <button class="btn" id="enter">Enter</button>
+        </div>
+    </div>
+    
+</body>
+</html>
