@@ -8,12 +8,13 @@
         *{    
             font-family: cursive, sans-serif;     
             font-size: 1em;
+            font-weight: bold;
         }
         #container{
             display: flex;
             flex-direction: column;
-            width: 300px;
-            height: 500px;
+            width: 350px;
+            height: 550px;
             justify-content: space-between;
             align-items: center;
             /* border: 1px solid red; */
@@ -55,6 +56,10 @@
         #minMax p{
             /* border: 1px dashed orange; */
             margin-top: -5px;
+        }
+        #lblScore{
+            margin-top: -20px;
+            text-align: center;
         }
         #scoreBox>input{
             border: 1px solid rgb(15, 15, 15);
@@ -107,6 +112,7 @@
             </div>
         </div>
         <div id="scoreBox">
+            <p id="lblScore">Score</p>
             <input type="text" name="score" id="score">
         </div>
         <div id="buttons">
