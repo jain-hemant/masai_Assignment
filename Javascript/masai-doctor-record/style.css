@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 5%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+form input, select{
+    padding: 5px 40px;
+}
+form input[type="submit"]{
+    padding: 7px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(68, 112, 195);
+    color: white;
+}
+#filter{
+    position: fixed;
+    right: 10%;
+    top: 20px;
+}
+table{
+    border-collapse: collapse;
+}
+table thead{
+    background-color: rgb(68, 112, 195);
+}
+th{
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid #ccb;
+}
+td{
+    padding: 5px 10px;
+    border: 1px solid #b0aeae;
+}
+.btnDelete{
+    border: none;
+    background-color: transparent;
+}
+.btnDeleteBox{
+    background-color: red;
+}
